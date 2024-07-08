@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">KFU</string>
+
+    <string name="no_data_enrolled_course">الدورات المسجلة - لم تقم بالتسجيل في أي دورات بعد. تحقق من دوراتنا وسجل اليوم!</string>
+    <string name="no_data_ongoing_courses">الدورات المستمرة - ليس لديك أي دورات تدريبية مستمرة الآن. قم بالتسجيل في الدورة لتبدأ التعلم!</string>
+    <string name="no_data_attendance_history">سجل الحضور - لم يتم العثور على سجلات الحضور. قم بالتسجيل في الدورة لبدء تتبع حضورك.
+</string>
+    <string name="no_data_course_history">سجل الدورة - ليس لديك سجل الدورة حالياً. سجل في الدورة لتبدأ رحلتك التعليمية!
+</string>
+    <string name="no_data_messages">الرسائل - لا توجد رسائل بعد. قم بالتسجيل في الدورة لبدء تلقي الرسائل!
+</string>
+    <string name="no_data_report_an_issue">الإبلاغ عن مشكلة - لم يتم العثور على بلاغات. يرجى الإبلاغ مرة لتتبعها هنا.
+</string>
+    <string name="no_data_notification">الإشعارات - لا توجد إشعارات حتى الآن. قم بالتسجيل في الدورة لبدء تلقي التحديثات!</string>
+
+
+</resources>

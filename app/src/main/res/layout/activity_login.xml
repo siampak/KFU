@@ -85,6 +85,16 @@
             android:textColor="#333333"
             android:text="Programs"/>
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="#D0B756"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignup" />
+
     </LinearLayout>
 
 
@@ -104,19 +114,19 @@
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
                 android:layout_marginHorizontal="26.00dp"
                 android:layout_marginTop="19.50dp"
-                app:boxCornerRadiusBottomEnd="16.90dp"
-                app:boxCornerRadiusBottomStart="16.90dp"
-                app:boxCornerRadiusTopEnd="16.90dp"
-                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusBottomEnd="11.90dp"
+                app:boxCornerRadiusBottomStart="11.90dp"
+                app:boxCornerRadiusTopEnd="11.90dp"
+                app:boxCornerRadiusTopStart="11.90dp"
                 app:endIconMode="clear_text"
                 >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etUserNumber"
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Email/Password"
+                    android:hint="Email/Phone"
                     android:drawablePadding="9.10dp"
-                    android:inputType="number"
+                    android:inputType="textEmailAddress"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,22 +136,33 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
                 android:layout_marginHorizontal="26.00dp"
-                app:boxCornerRadiusBottomEnd="16.90dp"
-                app:boxCornerRadiusBottomStart="16.90dp"
-                app:boxCornerRadiusTopEnd="16.90dp"
-                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusBottomEnd="11.90dp"
+                app:boxCornerRadiusBottomStart="11.90dp"
+                app:boxCornerRadiusTopEnd="11.90dp"
+                app:boxCornerRadiusTopStart="11.90dp"
                 app:endIconMode="clear_text"
                 >
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etNumber"
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Password"
                     android:drawablePadding="9.10dp"
-                    android:inputType="number"
+                    android:inputType="textPassword"
                     android:autofillHints="password"
                     />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="10.10sp"
+                android:layout_marginEnd="40dp"
+                android:textStyle="normal"
+                android:textColor="#7C7C7C"
+                android:text="Forget Password"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
@@ -223,10 +244,9 @@
             >
 
             <TextView
-                android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginTop="25dp"
+
                 android:textSize="18sp"
                 android:clickable="true"
                 android:gravity="center"
@@ -236,10 +256,9 @@
                 android:text="Don’t have an account?"
                 android:focusable="true" />
             <TextView
-                android:id="@+id/tv2"
+                android:id="@+id/tvRegistration"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginTop="25dp"
                 android:textSize="18sp"
                 android:clickable="true"
                 android:gravity="center"

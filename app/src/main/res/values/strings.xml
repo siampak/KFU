@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">KFU</string>
+    <string name="no_data_enrolled_course">You haven\t enrolled in any courses yet. Check out our courses and enroll today!</string>
+    <string name="no_data_ongoing_courses">You don\t have any ongoing courses right now. Enroll in a course to start learning!</string>
+    <string name="no_data_attendance_history">No attendance records found. Enroll in a course to start tracking your attendance.</string>
+    <string name="no_data_course_history">You have no course history yet. Enroll in a course to start your learning journey!</string>
+    <string name="no_data_messages">No messages yet. Enroll in a course to start receiving messages!</string>
+    <string name="no_data_report_an_issue">No reports found. Please report one to track them here.</string>
+    <string name="no_data_notification">No notifications yet. Enroll in a course to start receiving updates!</string>
+
 </resources>
