@@ -50,24 +50,3 @@ object RetrofitProfile {
     }
 
 }
-
-
-
-//    private val logging = HttpLoggingInterceptor().apply {
-//        level = HttpLoggingInterceptor.Level.BODY
-//    }
-//
-//    private val client = OkHttpClient.Builder()
-//        .addInterceptor(logging)
-//        .build()
-//
-//    val instance: ProfileApiService by lazy {
-//        val retrofit = Retrofit.Builder()
-//            .baseUrl(BASE_URL)
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .client(client)
-//            .build()
-//
-//        retrofit.create(ProfileApiService::class.java)
-//    }
-//}

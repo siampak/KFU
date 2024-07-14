@@ -82,5 +82,7 @@ dependencies {
     implementation (libs.glide)
     annotationProcessor (libs.compiler)
 
+    implementation ("androidx.fragment:fragment-ktx:1.3.4")
+
 }
 

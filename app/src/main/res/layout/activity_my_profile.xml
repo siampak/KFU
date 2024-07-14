@@ -37,6 +37,32 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="26dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_arrow_container"
+        app:shapeAppearanceOverlay="@style/CircularImage" />
+
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Bill K. Donaghy"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
     <TextView
         android:id="@+id/placeholder_text"
         android:layout_width="0dp"
@@ -47,12 +73,12 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back_arrow_container" />
+        app:layout_constraintTop_toBottomOf="@id/profile_name" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/first_name_input_layout"
+        android:id="@+id/full_name_input_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -63,39 +89,19 @@
         app:layout_constraintTop_toBottomOf="@id/placeholder_text">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/first_name_input"
+            android:id="@+id/full_name_input"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:textColor="#333333"
             android:gravity="start|center"
             android:padding="9dp"
+            android:textSize="14sp"
             android:inputType="textPersonName"
             android:background="@drawable/bg_white_border_rounded_bright_gray_5"
-            android:hint="First Name" />
+            android:hint="Full Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/last_name_input_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/first_name_input_layout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/last_name_input"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:padding="9dp"
-            android:background="@drawable/bg_white_border_rounded_bright_gray_5"
-            android:hint="Last Name" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Email -->
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/email_input_layout"
@@ -106,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:hintTextColor="#B8B8B8"
-        app:layout_constraintTop_toBottomOf="@id/last_name_input_layout">
+        app:layout_constraintTop_toBottomOf="@id/full_name_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_input"
@@ -114,8 +120,11 @@
             android:layout_height="48dp"
             android:textColor="#B8B8B8"
             android:padding="9dp"
+            android:textSize="14sp"
             android:background="@drawable/bg_white_border_rounded_deep_gray_5"
-            android:hint="Email" />
+            android:hint="Email"
+            android:focusable="false"
+            android:clickable="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -136,8 +145,11 @@
             android:layout_height="48dp"
             android:textColor="#B8B8B8"
             android:padding="9dp"
+            android:textSize="14sp"
             android:background="@drawable/bg_white_border_rounded_deep_gray_5"
-            android:hint="Phone Number" />
+            android:hint="Phone Number"
+            android:focusable="false"
+            android:clickable="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -158,6 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:textColor="#333333"
+            android:textSize="14sp"
             android:padding="9dp"
             android:background="@drawable/bg_white_border_rounded_bright_gray_5"
             android:hint="Govt ID or Iqama no *" />
@@ -182,6 +195,7 @@
             android:inputType="none"
             android:textColor="#333333"
             android:padding="9dp"
+            android:textSize="14sp"
             android:background="@drawable/bg_white_border_rounded_bright_gray_5"
             android:drawableEnd="@drawable/down_arrow" />
     </com.google.android.material.textfield.TextInputLayout>
