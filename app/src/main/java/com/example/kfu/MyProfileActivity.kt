@@ -179,19 +179,6 @@ class MyProfileActivity : AppCompatActivity() {
 
         })
 
-        //now observe user type list from api
-//            profileViewModel.userTypeList.observe(this, Observer { userTypeList ->
-//                val adapter = ArrayAdapter(
-//                    this,
-//                    android.R.layout.simple_spinner_item,
-//                    userTypeList.data ?: emptyList()
-//                )
-//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//                binding.typeOfUserInput.setAdapter(adapter)
-//
-//                val selectedType = userTypeList.data?.firstOrNull { it?.id == profileViewModel.profileResponse.value?.data?.userType }
-//                binding.typeOfUserInput.setSelection(adapter.getPosition(selectedType))
-
 
         profileViewModel.imageUri.observe(this, Observer { uri ->
             Glide.with(this)
@@ -211,70 +198,6 @@ class MyProfileActivity : AppCompatActivity() {
             }
         })
 }
-
-
-//    private fun observeViewModel() {
-//        profileViewModel.profileResponse.observe(this, Observer { profileResponse ->
-//            profileResponse?.data?.let { profile ->
-//
-//                //glide image
-//                val imageUrl = profile.image ?: ""
-//                Glide.with(this)
-//                    .load(imageUrl)
-////                    .placeholder(com.example.kfu.R.drawable.profile_male)
-//                    .into(binding.profileImage)
-//
-//                binding.fullNameInput.setText(profile.fullName)
-//                binding.emailInput.setText(profile.email)
-//                binding.phoneNumberInput.setText(profile.phoneNumber)
-//                binding.govtIdInput.setText(profile.govtIdOrIqamaNo)
-//
-//
-//                profile.userType?.let { userType ->
-//                    profileViewModel.userTypeList.observe(this, Observer { userTypeList ->
-//                        userTypeList?.data?.forEach { userData ->
-//                            if (userData?.id == userType) {
-//                                binding.typeOfUserInput.setText(userData.userType)
-//                                return@forEach // use kora hoyse -->  for Exit loop after finding the match.
-//                            }
-//                        }
-//                        // Setup AutoCompleteTextView Adapter
-//                        val userTypeNames = userTypeList.data?.map { it?.userType.orEmpty() } ?: listOf()
-//                        val adapter = ArrayAdapter(this, R.layout.simple_dropdown_item_1line, userTypeNames)
-//                        binding.typeOfUserInput.setAdapter(adapter)
-//
-////
-//                    })
-//                }
-//            }
-//        })
-//
-//        //glide image
-//        profileViewModel.imageUri.observe(this, Observer { uri ->
-//            uri?.let {
-//                Glide.with(this).load(uri).into(binding.profileImage)
-//            }
-//        })
-//
-//
-//        profileViewModel.profileError.observe(this, Observer { error ->
-//            error?.let {
-//                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//
-//        profileViewModel.updateResponse.observe(this, Observer { updateResponse ->
-//            updateResponse?.let {
-//                Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//        profileViewModel.updateError.observe(this, Observer { error ->
-//            error?.let {
-//                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//
-//    }
 
 
 
@@ -299,23 +222,6 @@ class MyProfileActivity : AppCompatActivity() {
         builder.show()
     }
 
-
-
-//    private fun showImagePickerOptions() {
-//
-//        val options = arrayOf("Select from Gallery", "Capture from Camera")
-//        val builder = android.app.AlertDialog.Builder(this)
-//        builder.setTitle("Choose an option")
-//        builder.setItems(options) { dialog, which ->
-//            when (which) {
-//                0 -> requestStoragePermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//                1 -> requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
-//            }
-//
-//        }
-//        builder.show()
-//
-//    }
 
     private fun selectImageFromGallery() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -350,16 +256,5 @@ class MyProfileActivity : AppCompatActivity() {
         }
     }
 
-//    //glide image
-//    private fun getRealPathFromURI(contentUri: Uri): String? {
-//        var cursor = contentResolver.query(contentUri, null, null, null, null)
-//        return if (cursor == null) {
-//            contentUri.path
-//        } else {
-//            cursor.moveToFirst()
-//            val idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA)
-//            cursor.getString(idx)
-//        }
-//    }
 }
 

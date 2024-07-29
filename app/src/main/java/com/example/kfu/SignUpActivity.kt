@@ -53,6 +53,6 @@ class SignUpActivity : AppCompatActivity() {
     private fun navigateToLogin() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
-        finish() // Optional: Finish SignUpActivity so that the user can't go back to it.
+        finish()
     }
 }

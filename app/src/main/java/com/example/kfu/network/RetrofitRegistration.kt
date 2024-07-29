@@ -1,6 +1,5 @@
 package com.example.kfu.network
 
-import com.example.kfu.userInterface.ApiService
 import com.example.kfu.userInterface.RegistrationApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

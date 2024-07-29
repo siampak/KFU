@@ -14,4 +14,5 @@ interface ApiService {
     fun getLoginData(
         @Body loginDataClass: LoginDataClass
     ): Call<LoginResponse>
+
 }

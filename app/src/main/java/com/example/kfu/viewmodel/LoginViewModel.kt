@@ -1,7 +1,5 @@
 package com.example.kfu.viewmodel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,7 +20,7 @@ class LoginViewModel : ViewModel() {
     val loginError : LiveData<String> = _loginError
 
     fun loginUser(username: String, password: String) {
-        val loginDataClass =LoginDataClass(password,username)
+        val loginDataClass = LoginDataClass(password,username)
         RetrofitClient.instance.getLoginData(loginDataClass).enqueue(object :
             retrofit2.Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {

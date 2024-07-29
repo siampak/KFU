@@ -2,8 +2,9 @@ package com.example.kfu.dataclass
 
 data class Course(
 
-    val courseImage: Any,
+    val id: Int,
+    val courseImage: String,
     val profileImage: String,
     val profileName: String,
-    val courseTitle: String
+    val courseTitle: String,
 )
